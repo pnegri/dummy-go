@@ -15,7 +15,7 @@ const INDEX = `<!DOCTYPE html>
     <title>shpyrd testing</title>
   </head>
   <body>
-	Sample Go App - Version 8
+	Sample Go App - Version 9
   </body>
 </html>`
 
@@ -28,7 +28,7 @@ func getenv(key, fallback string) string {
 }
 
 func main() {
-	fmt.Println("Version 8")
+	fmt.Println("Version 9")
 	router := mux.NewRouter()
 	router.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		fmt.Fprintln(w, INDEX)
