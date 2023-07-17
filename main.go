@@ -12,7 +12,7 @@ import (
 const INDEX = `<!DOCTYPE html>
 <html>
   <head>
-    <title>GitOps Testing</title>
+    <title>shpyrd testing</title>
   </head>
   <body>
 	Sample Go App - Version 8
@@ -20,11 +20,11 @@ const INDEX = `<!DOCTYPE html>
 </html>`
 
 func getenv(key, fallback string) string {
-    value := os.Getenv(key)
-    if len(value) == 0 {
-        return fallback
-    }
-    return value
+	value := os.Getenv(key)
+	if len(value) == 0 {
+		return fallback
+	}
+	return value
 }
 
 func main() {
@@ -34,5 +34,5 @@ func main() {
 		fmt.Fprintln(w, INDEX)
 	})
 
-	log.Fatal(http.ListenAndServe(":"+getenv("PORT","8080"), router))
+	log.Fatal(http.ListenAndServe(":"+getenv("PORT", "8080"), router))
 }
